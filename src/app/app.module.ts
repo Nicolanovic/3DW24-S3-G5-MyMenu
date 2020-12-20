@@ -7,6 +7,10 @@ import { RecettesComponent } from './recettes/recettes.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddRecettesComponent } from './add-recettes/add-recettes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RecettesComponent,
     IngredientsComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddRecettesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

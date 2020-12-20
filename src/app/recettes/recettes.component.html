@@ -5,8 +5,8 @@
   <tbody>
   <tr *ngFor="let recette of recettes">
     <td>{{ recette.name }} </td>
-    <td>{{ recette.time }}</td>
-    <td>    <img src="assets/images/update.png" [class.selected]="recette === selectedRecette" (click)="onSelect(recette)" /></td>
+    <td>{{ recette.time }} <img src="assets/images/clock.png"/></td>
+    <td>    <img class="update" src="assets/images/edit.png" [class.selected]="recette === selectedRecette" (click)="onSelect(recette)" /></td>
   </tr>
   </tbody>
 </table>

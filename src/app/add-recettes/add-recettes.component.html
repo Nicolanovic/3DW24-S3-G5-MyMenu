@@ -1,0 +1,57 @@
+<div class="container">
+    
+    <div class="add">
+        <a href="#">retour</a><br><br>
+        Nom:
+        <input type="text" name='nom'>
+        <br>
+        Durée:
+        <mat-slider thumbLabel [displayWith]="formatLabel" min="5" max="120" step="5" value ="60"></mat-slider>
+        <br>
+        Portions:
+        <mat-slider thumbLabel [displayWith]="formatLabel" min="1" max="10" step="1" value="1"></mat-slider>
+        <br>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle (click)='addLien()' value="">Ajouter un lien</mat-button-toggle>
+            <mat-button-toggle (click)='addRecette()' value="">Ajouter une recette</mat-button-toggle>
+        </mat-button-toggle-group>
+        <br>
+        <div *ngIf="displayLien">
+            lien:
+            <input type="text" name='lien'>
+        </div>
+        <div *ngIf="displayRecette">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>ingredient</td>
+                        <td>quantité</td>
+                        <td>unité</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name='ingredient' placeholder="ingrédient"></td>
+                        <td><input type="text" name='quantité' placeholder="quantité"></td>
+                        <td><input type="text" name='unité' placeholder="unité"></td>
+                    </tr>
+                    <tr *ngFor="let field of fieldArray; let i = index">
+                        <td><input type="text" name='ingredient' placeholder="ingrédient"></td>
+                        <td><input type="text" name='quantité' placeholder="quantité"></td>
+                        <td><input type="text" name='unité' placeholder="unité"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="addFieldValue()">+</button>
+            <button (click)="deleteFieldValue()">–</button> 
+            <br>
+            instructions:
+            <br>
+            <input type="text" name='instruction'>
+            <input *ngFor="let instru of addInstru; let i = index" type="text" name='instruction'>
+            <br>
+            <button (click)="addInstruValue()">+</button>
+            <button (click)="deleteInstruValue()">–</button> 
+        </div>
+        <br>
+        <button>Ajouter</button>
+    </div>
+</div>
