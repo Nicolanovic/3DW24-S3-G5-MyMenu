@@ -67,6 +67,12 @@
                 border-bottom:1px solid $secondmainColor;
                 width:48%;
 
+                a {
+                    text-decoration: none;
+                    color:$mainColor;
+                    font-weight:bold;
+                }
+
                 .recipe-left {
                     width:50%;
                 }

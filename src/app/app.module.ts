@@ -7,6 +7,7 @@ import { RecettesComponent } from './recettes/recettes.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RecettesComponent,
     IngredientsComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

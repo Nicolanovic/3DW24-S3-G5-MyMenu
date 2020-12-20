@@ -10,15 +10,10 @@ import { RECETTES} from "../mock-recettes";
 export class RecettesComponent implements OnInit {
 
   recettes = RECETTES;
-  selectedRecette: Recette;
-
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSelect(recette: Recette): void {
-    this.selectedRecette = recette;
-  }
 }
