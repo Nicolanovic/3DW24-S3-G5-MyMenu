@@ -146,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "MyMenu"
+  "defaultProject": "MyMenu",
+  "cli": {
+    "analytics": false
+  }
 }
