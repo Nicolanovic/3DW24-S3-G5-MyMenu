@@ -1,0 +1,32 @@
+@import '../var.scss';
+
+.header {
+    background-color:$mainColor;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:$defaultMargin;
+
+    .header-left {
+
+        h1 {
+            color:$backgroundColor;
+        }
+
+    }
+
+    .header-right {
+        display:flex;
+        flex-direction: row;
+
+        .right-memberArea {
+            margin-right:$defaultMargin;
+        }
+    }
+
+    img {
+        width:50px;
+    }
+    
+}
