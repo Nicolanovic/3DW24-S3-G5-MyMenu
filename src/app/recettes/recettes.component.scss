@@ -104,7 +104,19 @@
                 img {
                     width:20px;
                 }
+
+                @media (max-width:600px) {
+                    & {
+                        width:100%;
+                    }
+                }
             }
         }
+    }
+}
+
+@media (max-width:$maxWidth) {
+    .container {
+        margin:$defaultMargin*2;
     }
 }

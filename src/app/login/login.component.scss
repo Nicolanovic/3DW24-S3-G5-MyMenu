@@ -58,6 +58,23 @@
                 flex-direction: column;
                 align-items: center;
                 
+                .button-login {
+                    margin-top:$defaultMargin;
+                background-color:$backgroundColor;
+                color:$mainColor;
+                padding:$defaultMargin/4 $defaultMargin/2;
+                border-radius:$defaultBorderRadius;
+                border:3px solid $mainColor;
+                cursor:pointer;
+                font-size:$titleFontSize;
+                transition:0.3s all ease-in-out;
+                font-weight:bold;
+
+                &:hover {
+                    background:$mainColor;
+                    color:$backgroundColor;
+                }
+                }
             }
             
             div {
@@ -81,5 +98,11 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width:$maxWidth) {
+    .container {
+        margin:$defaultMargin*2;
     }
 }

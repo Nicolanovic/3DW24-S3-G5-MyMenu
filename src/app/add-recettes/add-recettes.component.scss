@@ -1,13 +1,13 @@
 @import '../var.scss';
 
-.dashboard {
+.add-recipe {
 
     display:flex;
     flex-direction: column;
     width:100%;
     max-width:$maxWidth;
 
-    .dashboard-nav {
+    .add-recipe-nav {
         
         display:flex;
         justify-content: space-between;
@@ -30,7 +30,7 @@
         }
     }
 
-    .dashboard-recipes {
+    .add-recipe-form {
 
         display:flex;
         flex-direction: column;
@@ -39,7 +39,7 @@
         border-radius:$defaultBorderRadius;
         box-shadow:$boxShadow;
 
-        .recipes-header {
+        .form-header {
 
             background-color: $secondmainColor;
 
@@ -49,56 +49,59 @@
             }
         }
 
-        .recipes-container {
+        .form-container {
 
-            padding:$defaultMargin/2 $defaultMargin $defaultMargin $defaultMargin;
+            padding:$defaultMargin;
             display:flex;
-            flex-direction: row;
-            flex-wrap:wrap;
-            justify-content: space-between;
+            flex-direction:column;
+            align-items:center;
 
-
-            .recipe {
+            .field {
+                width:100%;
                 display:flex;
+                flex-direction:column;
                 align-items:center;
-                justify-content: space-between;
-                margin-top:$defaultMargin/2;
-                padding:$defaultMargin/4 0px;
-                border-bottom:1px solid $secondmainColor;
-                width:48%;
+                margin-bottom:$defaultMargin;
 
-                .recipe-left {
-                    width:50%;
+                label {
+                    margin-bottom:$defaultMargin/2;
+                    font-weight:bold;
+                    font-size:$subtitleFontSize;
                 }
 
-                .recipe-right {
-                    display:flex;
-                    width:50%;
-                    justify-content: space-between;
-
-                    .right-left {
-                        display:flex;
-                        align-items:center;
-
-                        .duration {
-                            margin:0px;
-                            margin-left:5px;
-                        }
-                    }
-
-                    .right-right {
-                        display:flex;
-
-                        .edit {
-                            margin-right:10px;
-                        }
-                    }
+                input, mat-slider {
+                    width:90%;
+                    max-width:400px;
                 }
+            }
 
-                img {
-                    width:20px;
+            .form-tab {
+                padding:$defaultMargin/2;
+            }
+
+            button.add {
+                margin-top:$defaultMargin;
+                background-color:$backgroundColor;
+                color:$mainColor;
+                padding:$defaultMargin/4 $defaultMargin/2;
+                border-radius:$defaultBorderRadius;
+                border:3px solid $mainColor;
+                cursor:pointer;
+                font-size:$titleFontSize;
+                transition:0.3s all ease-in-out;
+                font-weight:bold;
+
+                &:hover {
+                    background:$mainColor;
+                    color:$backgroundColor;
                 }
             }
         }
+    }
+}
+
+@media (max-width:$maxWidth) {
+    .container {
+        margin:$defaultMargin*2;
     }
 }
