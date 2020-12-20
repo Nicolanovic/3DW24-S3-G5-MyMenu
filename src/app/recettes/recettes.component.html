@@ -1,1 +1,21 @@
-<p>recettes works!</p>
+<table class="recettes">
+  <thead>
+    <th colspan='3'>My recettes</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let recette of recettes">
+    <td>{{ recette.name }} </td>
+    <td>{{ recette.time }}</td>
+    <td>    <img src="assets/images/update.png" [class.selected]="recette === selectedRecette" (click)="onSelect(recette)" /></td>
+  </tr>
+  </tbody>
+</table>
+
+<div *ngIf="selectedRecette">
+  <h2>{{ selectedRecette.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{ selectedRecette.id }}</div>
+  <div><span>ingredient: </span>{{ selectedRecette.ingredient}}</div>
+  <div><span>durée: </span>{{ selectedRecette.time }}</div>
+</div>
+
+
